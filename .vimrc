@@ -5,25 +5,26 @@ set shiftwidth=4
 set expandtab
 set hlsearch
 set incsearch
-let _curfile = expand("%:t")
-if _curfile =~ ".*\.cpp" || _curfile =~ ".*\.c" || _curfile =~ ".*\.mk" || _curfile =~ ".*\.h"
-    inoremap ( ()<Esc>i
-    inoremap [ []<Esc>a
-    inoremap ' ''<Esc>i
-    inoremap " ""<Esc>i
-    inoremap , , <Esc>a
-    inoremap = <space>=<space><Esc>a
-    inoremap {<CR> {<CR>}<Esc>ko
-    inoremap {{ {}<Esc>i
-    map <silent> <F1> :YcmDiags<CR>
-    map <silent> <F2> :YcmCompleter GoTo<CR>
-    inoremap <silent> <F3> <Esc><C-w><Up>:hide<Esc>a
-    map <silent> <F3> <Esc><C-w><Up>:hide<CR>
-    setlocal spell
-endif
-set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype on
+augroup C_Settings
+    autocmd FileType c source ~/.vim/c.vim
+augroup END
+augroup CPP_Settings
+    autocmd FileType cpp source ~/.vim/cpp.vim
+augroup END
 
+set nocompatible              " be iMproved, required
+
+" Netrw banner"
+""let g:netrw_banner = 0
+""let g:netrw_browser_split = 2
+""let g:netrw_winsize  = 20
+""let g:netrw_liststyle = 1
+""map <silent> <F5> <Esc>:Vexplore<CR>
+""augroup ProjectDrawer
+""    autocmd!
+""    autocmd VimEnter * :Vexplore
+""augroup END
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -41,15 +42,12 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.  " Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'Valloric/YouCompleteMe'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -64,4 +62,4 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
