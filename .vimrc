@@ -16,5 +16,5 @@ augroup CPP_Setting
 augroup END
 
 augroup Vundle_Setting
-    autocmd BufRead * source ~/.vim/vundle.vim
+    source ~/.vim/vundle.vim
 augroup END
