@@ -23,5 +23,6 @@ if [ -x $(which git) ]; then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     cp .vimrc ~/.vimrc
     cp -nr .vim/* ~/.vim
+    vim -c PluginInstall -c qa!
     echo "Done!"
 fi
