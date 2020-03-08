@@ -5,6 +5,8 @@ set shiftwidth=4
 set expandtab
 set hlsearch
 set incsearch
+nnoremap q: <nop>
+nnoremap q/ <nop>
 filetype on
 
 augroup C_Setting
