@@ -35,6 +35,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'Valloric/YouCompleteMe'
 " Taglist provides the overview of the structure of source code files 
 Plugin 'taglist.vim'
+" Better Whitespace plugin causes all trailing whitespace characters
+Plugin 'ntpeters/vim-better-whitespace'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
