@@ -1,3 +1,4 @@
+syntax on
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>a
 inoremap ' ''<Esc>i
@@ -11,3 +12,4 @@ inoremap <silent> <F3> <Esc><C-w><Up>:hide<Esc>a
 map <silent> <F3> <Esc><C-w><Up>:hide<CR>
 map <silent> <F4> :TlistToggle<CR>
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_c_conf.py"
+autocmd VimEnter * :TlistToggle

@@ -5,6 +5,7 @@ set shiftwidth=4
 set expandtab
 set hlsearch
 set incsearch
+set ut=150
 nnoremap q: <nop>
 nnoremap q/ <nop>
 filetype on
