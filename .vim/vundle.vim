@@ -37,6 +37,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'taglist.vim'
 " Better Whitespace plugin causes all trailing whitespace characters
 Plugin 'ntpeters/vim-better-whitespace'
+" Gitgutter provides a git diff in vim
+Plugin 'airblade/vim-gitgutter'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
