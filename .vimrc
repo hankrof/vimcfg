@@ -18,6 +18,10 @@ augroup CPP_Setting
     autocmd FileType cpp source ~/.vim/cpp.vim
 augroup END
 
+augroup HS_Setting
+    autocmd FileType haskell source ~/.vim/hs.vim
+augroup END
+
 augroup Vundle_Setting
     source ~/.vim/vundle.vim
 augroup END
