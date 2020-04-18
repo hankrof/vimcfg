@@ -25,7 +25,10 @@ if [ -x $(which git) ]; then
     cp -r .vim/* ~/.vim
     cp -r .vim/.* ~/.vim
     vim -c PluginInstall -c qa!
+    cd ~/.vim/bundle/coc.nvim
+    ./install.sh
     vim -c CocInstall coc-clangd coc-json -c qa!
+    cd -
     echo "Done!"
 fi
 
@@ -40,5 +43,6 @@ if [ ! -x $(which bear) ]; then
     cmake .
     make all check
     sudo make install
+    cd -
     echo "Done!"
 fi
