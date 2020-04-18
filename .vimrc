@@ -9,6 +9,7 @@ set ut=150
 nnoremap q: <nop>
 nnoremap q/ <nop>
 filetype on
+syntax on
 
 augroup C_Setting
     autocmd FileType c source ~/.vim/c.vim
