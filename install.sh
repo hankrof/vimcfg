@@ -49,6 +49,13 @@ function install_package {
     fi
 }
 
+function install_coc_nvim {
+    cd ~/.vim/bundle/coc.nvim
+    npm install
+    vim -c CocInstall coc-clangd coc-json -c qa!
+    cd -
+}
+
 
 echo "Installing vimrc ... "
 if [ -f ~/.vimrc ] || [ -d ~/.vim ]; then
@@ -96,8 +103,6 @@ cp *.vim ~/.vim
 cp .vimrc ~/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim -c PluginInstall -c qa!
-cd ~/.vim/bundle/coc.nvim
-#vim -c CocInstall coc-clangd coc-json -c qa!
-cd -
+install_coc_nvim
 echo "Done!"
 
