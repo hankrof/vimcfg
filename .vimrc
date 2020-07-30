@@ -23,6 +23,10 @@ augroup HS_Setting
     autocmd FileType haskell source ~/.vim/hs.vim
 augroup END
 
+augroup Bitbake
+    autocmd BufNewFile,BufRead *.bb* set filetype=bitbake
+augroup END
+
 augroup Vundle_Setting
     source ~/.vim/vundle.vim
 augroup END

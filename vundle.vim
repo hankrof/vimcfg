@@ -34,6 +34,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.  " Plugin 'ascenator/L9', {'name': 'newL9'}
 " COC
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+" Vim files for the Bitbake tool
+Plugin 'kergoth/vim-bitbake'
 " Taglist provides the overview of the structure of source code files
 Plugin 'taglist.vim'
 " Better Whitespace plugin causes all trailing whitespace characters
