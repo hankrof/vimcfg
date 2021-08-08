@@ -52,7 +52,7 @@ function install_package {
 function install_coc_nvim {
     cd ~/.vim/bundle/coc.nvim
     npm install
-    vim -c CocInstall coc-clangd coc-json -c qa!
+    vim -c "CocInstall coc-clangd coc-json"
     cd -
 }
 
