@@ -85,6 +85,7 @@ install_package yarn
 install_package cmake
 install_package ctags
 install_package git
+install_package clang clangd
 
 package_exists bear
 if [ "$?" == "0" ]; then
