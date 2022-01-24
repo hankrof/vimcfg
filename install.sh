@@ -33,7 +33,7 @@ function install_package {
         package_exists pacman
         if [ "$?" == "1" ]; then
             echo "Detected pacman package manager!"
-            sudo pacman -Syuu $pacman_pkgname
+            sudo pacman -Syuu $pacman_pkgname --noconfirm
         fi
         package_exists apt
         if [ "$?" == "1" ]; then
