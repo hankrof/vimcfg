@@ -38,7 +38,7 @@ function install_package {
         package_exists apt
         if [ "$?" == "1" ]; then
             echo "Detected apt package manager!"
-            sudo apt install $apt_pkgname
+            sudo apt install $apt_pkgname -y
         fi
         package_exists $pkgname
         if [ "$?" == "0" ]; then
